@@ -2,10 +2,13 @@
 (function () {
 
     /* ---------------------------------- Local Variables ---------------------------------- */
+    var homeTpl = Handlebars.compile($("#home-tpl").html());
+    var employeeListTpl = Handlebars.compile($("#employee-list-tpl").html());
     var service = new EmployeeService();
     service.initialize().done(function () {
         console.log("Service initialized");
-        rendeHomeView();
+        renderHomeView();
+        findByName();
     });
 
     /* --------------------------------- Event Registration -------------------------------- */
@@ -36,13 +39,10 @@
         });
     }
 
-    runction renderHomeView() {
+    function renderHomeView() {
         var html =
-            "<h1>Directory</h1>" +
-            "<input class='search-key' type='search' placeholder='Enter name'/>" +
-            "<ul class='employee-list'></ul>";
-        $('body').html(html);
-        $('.search-key').on('keyup', findByName);
+            $('body').html(homeTpl());
+            $('.search-key').on('keyup', findByName);
     }
 
 }());
