@@ -3,20 +3,20 @@
 
     /* ---------------------------------- Local Variables ---------------------------------- */
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
-    EmployeeListView.prototype.template = Handlebars.compile($("#company-list-tpl").html());
-    EmployeeView.prototype.template = Handlebars.compile($("#company-tpl").html());
+    CompanyListView.prototype.template = Handlebars.compile($("#company-list-tpl").html());
+    CompanyView.prototype.template = Handlebars.compile($("#company-tpl").html());
 
-    var service = new EmployeeService();
+    var service = new CompanyService();
     service.initialize().done(function () {
         router.addRoute('', function() {
             console.log('empty');
             $('body').html(new HomeView(service).render().$el);
         });
 
-        router.addRoute('employees/:id', function(id) {
+        router.addRoute('companies/:id', function(id) {
             console.log('details');
-            service.findById(parseInt(id)).done(function(employee) {
-                $('body').html(new EmployeeView(employee).render().$el);
+            service.findById(parseInt(id)).done(function(company) {
+                $('body').html(new CompanyView(company).render().$el);
             });
         });
 

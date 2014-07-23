@@ -22,10 +22,10 @@
 	<ul class="table-view">
 		{{#each this}}
 		<li class="table-view-cell media">
-			<a href="#employees/{{ id }}">				
+			<a href="#companies/{{ id }}">				
                 <div class="media-body">
-                    {{firstName}} {{lastName}}
-                    <p>{{title}}</p>
+                    {{companyName}}
+                    <p>{{industryType}}</p>
                 </div>
             </a>
         </li>
@@ -45,16 +45,15 @@
               <ul class="table-view">
                   <li class="table-view-cell media">
                       <div class="media-body">
-                          {{ firstName }} {{ lastName }}
-                          <p>{{ title }}</p>
+                          {{companyName}}
+                          <p>{{industryType}}</p>
                       </div>
                   </li>
                   <li class="table-view-cell media">
                       <a href="#" class="push-right">
-                          <span class="media-object pull-left icon icon-call"></span>
                           <div class="media-body">
                               Funding Sought
-                              <p>{{ officePhone }}</p>
+                              <p>{{fundingSought}}</p>
                           </div>
                       </a>
                   </li>
@@ -68,10 +67,10 @@
 <script src="lib/handlebars.js"></script>
 <script src="lib/jquery.js"></script>
 <script src="lib/router.js"></script>
-<script src="js/services/memory/EmployeeService.js"></script>
-<script src="js/EmployeeListView.js"></script>
+<script src="js/services/memory/CompanyService.js"></script>
+<script src="js/CompanyListView.js"></script>
 <script src="js/HomeView.js"></script>
-<script src="js/EmployeeView.js"></script>
+<script src="js/CompanyView.js"></script>
 <script src="js/app.js"></script>
 
 </body>
