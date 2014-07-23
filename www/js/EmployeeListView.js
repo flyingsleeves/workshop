@@ -1,6 +1,6 @@
 var EmployeeListView = function () {
 
-    var employees;
+    var employees
 
     this.initialize = function () {
         this.$el = $('<div/>');

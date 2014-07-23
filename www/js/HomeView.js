@@ -6,7 +6,9 @@ var HomeView = function (service) {
         // Define a div wrapper for the view (used to attach events)
         this.$el = $('<div/>');
         this.$el.on('keyup', '.search-key', this.findByName);
+        this.findByName;
         employeeListView = new EmployeeListView();
+        this.displayAll();
         this.render();
     };
 
@@ -18,6 +20,12 @@ var HomeView = function (service) {
 
     this.findByName = function() {
         service.findByName($('.search-key').val()).done(function(employees) {
+            employeeListView.setEmployees(employees);
+        });
+    };
+
+    this.displayAll = function() {
+        service.findByName(' ').done(function(employees) {
             employeeListView.setEmployees(employees);
         });
     };

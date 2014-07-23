@@ -3,8 +3,8 @@
 
     /* ---------------------------------- Local Variables ---------------------------------- */
     HomeView.prototype.template = Handlebars.compile($("#home-tpl").html());
-    EmployeeListView.prototype.template = Handlebars.compile($("#employee-list-tpl").html());
-    EmployeeView.prototype.template = Handlebars.compile($("#employee-tpl").html());
+    EmployeeListView.prototype.template = Handlebars.compile($("#company-list-tpl").html());
+    EmployeeView.prototype.template = Handlebars.compile($("#company-tpl").html());
 
     var service = new EmployeeService();
     service.initialize().done(function () {
