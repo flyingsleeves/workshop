@@ -32,18 +32,29 @@ var CompanyService = function() {
     }
 
     var companies = [
-        {"id": 1, "companyName": "Weyland-Yutani Corp", "industryType": "Spaceship Construction", "fundingSought": "$2M"},
-        {"id": 2, "companyName": "Tyrell Corporation", "industryType": "Human Replicants", "fundingSought": "$1M"},
-        {"id": 3, "companyName": "Starfleet", "industryType": "Space Exploration", "fundingSought": "$500K"},
-        {"id": 4, "companyName": "Weyland-Yutani Corp", "industryType": "Spaceship Construction", "fundingSought": "$2M"},
-        {"id": 5, "companyName": "Tyrell Corporation", "industryType": "Human Replicants", "fundingSought": "$1M"},
-        {"id": 6, "companyName": "Starfleet", "industryType": "Space Exploration", "fundingSought": "$500K"},
-        {"id": 7, "companyName": "Weyland-Yutani Corp", "industryType": "Spaceship Construction", "fundingSought": "$2M"},
-        {"id": 8, "companyName": "Tyrell Corporation", "industryType": "Human Replicants", "fundingSought": "$1M"},
-        {"id": 9, "companyName": "Starfleet", "industryType": "Space Exploration", "fundingSought": "$500K"},
-        {"id": 10, "companyName": "Weyland-Yutani Corp", "industryType": "Spaceship Construction", "fundingSought": "$2M"},
-        {"id": 11, "companyName": "Tyrell Corporation", "industryType": "Human Replicants", "fundingSought": "$1M"},
-        {"id": 12, "companyName": "Starfleet", "industryType": "Space Exploration", "fundingSought": "$500K"}
+        {
+            "id": 1,
+            "companyName": "Weyland-Yutani Corp",
+            "industryType": "Spaceship Construction",
+            "fundingSought": "$2M",
+            "dateSubmitted": "7/23/2014"
+        },
+
+        {
+            "id": 2,
+            "companyName": "Tyrell Corporation",
+            "industryType": "Human Replicants",
+            "fundingSought": "$1M",
+            "dateSubmitted": "6/23/2014"
+        },
+
+        {
+            "id": 3,
+            "companyName": "Starfleet",
+            "industryType": "Space Exploration",
+            "fundingSought": "$500K",
+            "dateSubmitted": "5/13/2014"
+        },
     ];
 
 }

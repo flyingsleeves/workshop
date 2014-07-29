@@ -10,7 +10,7 @@
 
 <script id="home-tpl" type="text/template">
 	<header class="bar bar-nav">
-		<h1 class="title">Directory</h1>
+		<h1 class="title">Submissions</h1>
 	</header>
 	<div class="bar bar-standard bar-header-secondary">
 		<input class='search-key' type="search"/>
@@ -21,12 +21,10 @@
 <script id="company-list-tpl" type="text/template">
 	<ul class="table-view">
 		{{#each this}}
-		<li class="table-view-cell media">
-			<a href="#companies/{{ id }}">				
-                <div class="media-body">
-                    {{companyName}}
-                    <p>{{industryType}}</p>
-                </div>
+		<li class="table-view-cell">
+			<a href="#companies/{{id}}" class="navigate-right">				
+                {{companyName}}
+                <p>{{dateSubmitted}}</p>
             </a>
         </li>
         {{/each}}
@@ -34,33 +32,37 @@
 </script>
 
 <script id="company-tpl" type="text/template">
-      <header class="bar bar-nav">
-          <a class="btn btn-link btn-nav pull-left" href="#">
-              <span class="icon icon-left-nav"></span>
-          </a>
-          <h1 class="title">Company</h1>
-      </header>
-      <div class="content">
-          <div class="card">
-              <ul class="table-view">
-                  <li class="table-view-cell media">
-                      <div class="media-body">
-                          {{companyName}}
-                          <p>{{industryType}}</p>
-                      </div>
-                  </li>
-                  <li class="table-view-cell media">
-                      <a href="#" class="push-right">
-                          <div class="media-body">
-                              Funding Sought
-                              <p>{{fundingSought}}</p>
-                          </div>
-                      </a>
-                  </li>
-              </ul>
-          </div>
-      </div>
-  </script>
+    <header class="bar bar-nav">
+        <a class="btn btn-link btn-nav pull-left" href="#">
+            <span class="icon icon-left-nav"></span>
+        </a>
+        <h1 class="title">Company</h1>
+    </header>
+    <div class="content">
+        <div class="card">
+            <ul class="table-view">
+
+                <li class="table-view-cell">
+                    {{companyName}}
+                    <p>{{industryType}}</p>
+                </li>
+
+                <li class="table-view-cell">
+                        Funding Sought
+                        <p>{{fundingSought}}</p>
+                </li>
+
+                <li class="table-view-cell">
+                    IP Potential
+                    <div class="toggle">
+                        <div class="toggle-handle"></div>
+                    </div>
+                </li>
+
+            </ul>
+        </div>
+    </div>
+</script>
 
 <script src="cordova.js"></script>
 <script src="lib/fastclick.js"></script>

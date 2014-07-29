@@ -6,6 +6,9 @@ var CompanyView = function(company) {
 
     this.render = function() {
         this.$el.html(this.template(company));
+/*        this.$el.click(function() {
+            $('.media-body').hide();
+        });*/
         return this;
     };
 
